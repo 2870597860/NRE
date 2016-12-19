@@ -1,0 +1,1 @@
+EntityCalsses=org_name,BusinessConn=Yes,BusinessRedi=向外,financialSup=No

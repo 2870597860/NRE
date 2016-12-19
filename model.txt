@@ -1,0 +1,14 @@
+Rid EntityCalsses BusinessConn BusinessRedi financialSup label
+1 company_name Yes 向外 No 客户关系
+2 org_name Yes 向外 No 客户关系 
+3 company_name Yes 向内 No 供应关系
+4 org_name Yes 向内 No 供应关系 
+5 product_name No No 向外 技术研发
+6 company_name No No 向内 控股母公司
+7 org_name No No 向内 控股母公司  
+8 org_name No No 向内 控股母公司  
+9 org_name No No 向内 控股母公司  
+10 company_name No No 向外 控股子公司
+11 org_name No No 向外 控股子公司 
+12 org_name No No 向外 控股子公司 
+13 org_name No No 向外 控股子公司 

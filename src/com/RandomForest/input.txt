@@ -1,0 +1,16 @@
+Rid Age Income Student CreditRating BuysComputer
+1 MiddleAged High No Fair 是
+2 MiddleAged High Yes Fair 是
+3 MiddleAged Low Yes Excellent 是
+4 MiddleAged Medium No Excellent 是
+5 Senior Medium No Fair 是
+6 Senior Low Yes Fair 是
+7 Senior Medium Yes Fair 是
+8 Youth Low Yes Fair 是
+9 Youth Medium Yes Excellent 是
+10 Youth High No Fair 否
+11 Youth High No Excellent 否
+12 Youth Medium No Fair 否
+13 Senior Low Yes Excellent 否
+14 Senior Medium No Excellent 否
+Age=Youth,Income=Low,Student=No,CreditRating=Fair
