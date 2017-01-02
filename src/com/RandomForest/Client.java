@@ -24,7 +24,7 @@ public class Client {
 		// 决策树的样本占总数的占比率
 		double sampleNumRatio = 1;
 		// 样本数据的采集特征数量占总特征的比例
-		double featureNumRatio = 1;
+		double featureNumRatio = 0.6;
 		RandomForestTool tool = new RandomForestTool(filePath, sampleNumRatio,
 				featureNumRatio);
 		// 构造随机森林

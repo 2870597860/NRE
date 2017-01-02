@@ -1,1 +1,9 @@
 EntityCalsses=org_name,BusinessConn=Yes,BusinessRedi=向外,financialSup=No
+EntityCalsses=company_name,BusinessConn=Yes,BusinessRedi=向外,financialSup=No
+EntityCalsses=company_name,BusinessConn=Yes,BusinessRedi=向内,financialSup=No
+EntityCalsses=org_name,BusinessConn=Yes,BusinessRedi=向内,financialSup=No
+EntityCalsses=product_name,BusinessConn=No,BusinessRedi=No,financialSup=向外
+EntityCalsses=company_name,BusinessConn=No,BusinessRedi=No,financialSup=向内
+EntityCalsses=org_name,BusinessConn=No,BusinessRedi=No,financialSup=向内
+EntityCalsses=company_name,BusinessConn=No,BusinessRedi=No,financialSup=向外
+EntityCalsses=org_name,BusinessConn=No,BusinessRedi=No,financialSup=向外

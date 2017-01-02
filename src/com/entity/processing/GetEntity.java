@@ -73,7 +73,11 @@ public class GetEntity {
 		return sb.toString();
 
 	} 
-	//因为要对识别的实体进行过滤，一个公司年报中所有的实体以及类型
+	/**
+	 * 因为要对识别的实体进行过滤，一个公司年报中所有的实体以及类型
+	 * product_name、company_name的实体
+	 */
+	
 	public static TreeSet<String> getFilter(String content){
 		TreeSet<String> set=new TreeSet<>();
 		StringBuilder sb=new StringBuilder();
