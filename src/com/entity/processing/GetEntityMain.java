@@ -19,35 +19,34 @@ import com.txt.processing.WriteContent;
  * @author Administrator
  *
  */
-public class GetEntity {
+public class GetEntityMain {
 	public static void main(String[] args) {
 		String entityPath="E:\\SES和企业信息\\股票期刊论文\\词频统计和分析\\report\\entity";
-		HashMap<String, TreeSet<String>> map=new HashMap<>();
+		HashMap<String, TreeSet<String>> entityMap=new HashMap<>();
 		WriteContent wrt=new WriteContent();
-		String content=null;
-		String Company=null;
-		TreeSet<String> treeSet=null;
 		try {
 			List<String> fileLists=ReadFiles.readDirs(entityPath);//返回文件的绝对路径
 			for (String file : fileLists) {
+				String entityContent=null;
+				String Company=null;
+				TreeSet<String> treeSet=null;
 				int preCom=file.indexOf("entity_");
 				int laterCom=file.indexOf(".txt");
 				Company=file.substring(preCom+"entity_".length(), laterCom);
 				//读取文件内容
-				content= readEntity(file);
+				entityContent= readEntity(file);
 				//对实体进行过滤
-				treeSet=getFilter(content);
+				treeSet=getFilter(entityContent);
+				entityMap.put(Company, treeSet);//将公司以及公司年报对应的实体存储起来
+				System.out.println(treeSet);
 			}
-			System.out.println(treeSet);
-
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		map.put(Company, treeSet);//将公司以及公司年报对应的实体存储起来
 		//建立特征向量
 		BuildVector bv=new BuildVector(); 
-		bv.extractFeature(map);
+		bv.extractFeature(entityMap);
 		System.out.println("处理完毕：");
 	}
 	public static String readEntity(String filePath){

@@ -7,13 +7,15 @@ import java.util.TreeSet;
 import org.python.antlr.PythonParser.listmaker_return;
 import org.python.antlr.PythonParser.return_stmt_return;
 
+import edu.fudan.ml.types.Dictionary;
+import edu.fudan.nlp.cn.tag.CWSTagger;
 import edu.fudan.nlp.cn.tag.POSTagger;
 import edu.fudan.nlp.parser.dep.DependencyTree;
 import edu.fudan.nlp.parser.dep.JointParser;
 
 
 public class SentenceParse {
-	private static JointParser parser;
+	
 	//
 	public  ArrayList<String> depparser(String text,String entityName){
 		String sentence="";
@@ -43,11 +45,13 @@ public class SentenceParse {
 	 * 只输入句子，不带词性
 	 * @throws Exception 
 	 */
-	private static ArrayList<String> test_dep(String word){  
+	public  ArrayList<String> test_dep(String word){  
+		JointParser parser;
 		ArrayList<String> list=new ArrayList<>();
 		try {
 			parser = new JointParser("models/dep.m");
-			POSTagger tag = new POSTagger("models/seg.m","models/pos.m");
+			CWSTagger cwst = new CWSTagger("./models/seg.m",new Dictionary("./models/dict.txt"));
+			POSTagger tag = new POSTagger(cwst,"models/pos.m");
 			String[][] s = tag.tag2Array(word);
 			/*DependencyTree tree = parser.parse2T(s[0],s[1]);
 			System.out.println(tree.toString());*/
@@ -93,9 +97,10 @@ public class SentenceParse {
 		return sentence;
 	}
 	public static void main(String[] args) throws Exception {
-		parser = new JointParser("models/dep.m");
+		//parser = new JointParser("models/dep.m");
+		SentenceParse sp=new SentenceParse();
 		String word = "主要系公司本期收到徽商银行股份有限公司2014年度利润分红款。";
-		test_dep(word);
+		sp.test_dep(word);
 
 	}
 }

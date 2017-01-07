@@ -35,11 +35,11 @@ class Mycompla implements Comparator<Double>{
 
 }
 public class BuildVector {
-	static HashMap<String, String[]> entityRelation=new HashMap<>();
 	private static double CLIENT=0.55;//阈值
 	private static double SUPPORT=0.55;//阈值
-	private static double DEVELOP=0.47;//阈值
+	private static double DEVELOP=0.40;//阈值
 	private static double INVEST=0.60;//阈值
+	static HashMap<String, String[]> entityRelation=new HashMap<>();
 	//提取特征,其中TreeSet<String>中存储的是以“、”隔开的实体名和实体类别的字符串
 	public void extractFeature(HashMap<String, TreeSet<String>> map){
 		define();
