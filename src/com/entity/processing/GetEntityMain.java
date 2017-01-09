@@ -10,6 +10,7 @@ import java.io.InputStreamReader;
 import java.io.UnsupportedEncodingException;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Set;
 import java.util.TreeSet;
 import com.txt.processing.ReadFiles;
 import com.txt.processing.WriteContent;
@@ -44,9 +45,11 @@ public class GetEntityMain {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		//建立特征向量
+		/*//建立特征向量
 		BuildVector bv=new BuildVector(); 
-		bv.extractFeature(entityMap);
+		bv.extractFeature(entityMap);*/
+		GetSentences getSentence=new GetSentences();
+		getSentence.getEntitySentence(entityMap);
 		System.out.println("处理完毕：");
 	}
 	public static String readEntity(String filePath){

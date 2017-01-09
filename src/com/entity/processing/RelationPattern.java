@@ -40,7 +40,6 @@ public class RelationPattern {
 							e.printStackTrace();
 						}//返回关键词抽取结果list集合
 					}
-					
 				}else {
 					//对实体所在文本进行分析
 					SentenceParse sp=new SentenceParse();

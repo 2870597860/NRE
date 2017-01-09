@@ -31,11 +31,11 @@ class compla implements Comparator<Double>{
 		// TODO Auto-generated method stub
 		return 0;
 	}
-	
+
 }
 public class test {
 	public static void main(String args[]){  
-		String str="《丁酸氯维地平及乳剂》product_name";
+		/*String str="《丁酸氯维地平及乳剂》product_name";
 		StringBuilder sb=new StringBuilder();
 		sb.append(str);
 		sb.insert(sb.indexOf("p"), "、");
@@ -58,21 +58,21 @@ public class test {
 		System.out.println(hash.toString());
 		WriteContent wc=new WriteContent();
 		String path="./hehe.txt";
-		
+
 		Set<Map.Entry<String, TreeMap<Double, String>>> set=hash.entrySet();
 		Iterator<Map.Entry<String, TreeMap<Double, String>>> it=set.iterator();
 		while (it.hasNext()) {
 			Map.Entry<String, TreeMap<Double, String>> en=it.next();
-			/*en.getValue();
-			en.getKey();*/
+			en.getValue();
+			en.getKey();
 			wc.writeCon(en.getKey()+":\n"+en.getValue().toString(),path);
 		}
 		System.out.println("xiewan=====");
-		/*Set<String> ket=hash.keySet();
+		Set<String> ket=hash.keySet();
 		for (String string : ket) {
-			
-		}*/
-		
+
+		}
+
 		Set<Map.Entry<Double, String>> entryset=map.entrySet();
 		for (Map.Entry<Double, String> entry : entryset) {
 			System.out.println(entry.getValue());
@@ -118,16 +118,38 @@ public class test {
 		System.out.println(stence.substring(start+1,end+1));
 		String fles="company_name 有 向外 无";
 		String[] arrts=fles.split(" ");
-		System.out.println(arrts.toString());
+		System.out.println(arrts.toString());*/
+		TreeMap< String,Double> similar=new TreeMap<>(new MycomplaPattern1());
+		similar.put("A", 2.345);
+		similar.put("F", 4.345);
+		similar.put("D", 1.345);
+		similar.put("C", 0.345);
+		System.out.println(similar);
 	}
 }
 class colp implements Comparator<Double>{
-	
+
 	public int compare(Double o1, Double o2) {
-	// TODO Auto-generated method stub
-	int num=o2.compareTo(o1);
+		// TODO Auto-generated method stub
+		int num=o2.compareTo(o1);
 
-	return num;
+		return num;
+	}
 }
-}
+class MycomplaPattern1 implements Comparator<String>{
+	TreeMap< String,Double> similar;
+	public MycomplaPattern1() {
+		// TODO Auto-generated constructor stub
+	}
+	public MycomplaPattern1(TreeMap< String,Double> similar) {
+		// TODO Auto-generated constructor stub
+		this.similar=similar;
+	}
+	@Override
+	public int compare(String s1, String s2) {
+		// TODO Auto-generated method stub
+		int num=similar.get(s2).compareTo(similar.get(s1));
+		return num;
+	}
 
+}

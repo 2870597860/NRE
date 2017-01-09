@@ -12,6 +12,7 @@ import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.io.OutputStreamWriter;
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
@@ -21,6 +22,21 @@ import java.util.TreeMap;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+//定义比较器降序排列
+/*class MycomplaPattern implements Comparator<String>{
+	TreeMap< String,Double> similar;
+	public MycomplaPattern(TreeMap< String,Double> similar) {
+		// TODO Auto-generated constructor stub
+		this.similar=similar;
+	}
+	@Override
+	public int compare(String s1, String s2) {
+		// TODO Auto-generated method stub
+		int num=similar.get(s2).compareTo(similar.get(s1));
+		return num;
+	}
+
+}*/
 //关系模式之间的相似度衡量
 public class PatternMatching {
 	private static double CLIENT=0.55;//阈值
@@ -52,7 +68,7 @@ public class PatternMatching {
 				Iterator<String> itSeed=seedList.iterator();
 				List<String> relationSet=new ArrayList<>();
 				//使用自定义的比较器，按照降序排序，以便获取第一个可以和value
-				TreeMap<Double, String> similar=new TreeMap<>(new Mycompla());
+				TreeMap<Double,String> similar=new TreeMap<>(new Mycompla());
 				while (itSeed.hasNext()) {
 					String is = (String) itSeed.next();
 					//isArr数组大小为3，isArr[0]为实体关系，isArr[1]为实体类别，isArr[2]为可以表达实体关系的特征词汇
@@ -69,11 +85,16 @@ public class PatternMatching {
 				}
 				//获取匹配最大值并进行阈值过滤
 				simMaxAndFilterThreshold(similar,relationSet,icArr,seedList);
-
 			}
 		}
-
 	}
+	/**
+	 * 对语料中的每个实体进行关系归类，并且添加到关系模式中
+	 * @param similar 余弦相似度计算结果（关系特征）
+	 * @param relationSet 存放种子中的关系，以便语料进行比较
+	 * @param icArr 从训练语料中获取的icArr[0]是实体，icArr[1]实体类型，icArr[2]为可以表达实体关系的特征词汇
+	 * @param seedList 种子实例
+	 */
 	public void simMaxAndFilterThreshold(TreeMap<Double, String> similar,List<String> relationSet,
 			String[] icArr,List<String> seedList){
 		//获取最大值的特征相似度的并返回标准特征归属
@@ -90,10 +111,21 @@ public class PatternMatching {
 		}
 		String newPattern=null;
 		for (String  relation: relationSet) {
-			String[] relArr=relation.split("、");
-			if (relationType.equals(relArr[0])) {
-				if (maxSimilarValue>CLIENT) {
-					newPattern=relArr[0]+","+icArr[1]+","+"<"+icArr[2]+">"+","+icArr[0];
+			if (relationType.equals(relation)) {
+				if (relationType.equals("客户关系") && (maxSimilarValue>CLIENT)) {
+					newPattern=relation+","+icArr[1]+","+"<"+icArr[2]+">"+","+icArr[0];
+					seedList.add(newPattern);//将抽取模板添加到样本模板中
+				}
+				if (relationType.equals("供应商关系")&& (maxSimilarValue>SUPPORT)) {
+					newPattern=relation+","+icArr[1]+","+"<"+icArr[2]+">"+","+icArr[0];
+					seedList.add(newPattern);//将抽取模板添加到样本模板中
+				}
+				if (relationType.equals("技术研发")&& (maxSimilarValue>DEVELOP)) {
+					newPattern=relation+","+icArr[1]+","+"<"+icArr[2]+">"+","+icArr[0];
+					seedList.add(newPattern);//将抽取模板添加到样本模板中
+				}
+				if (relationType.equals("控股子公司")&& (maxSimilarValue>ControlSub)) {
+					newPattern=relation+","+icArr[1]+","+"<"+icArr[2]+">"+","+icArr[0];
 					seedList.add(newPattern);//将抽取模板添加到样本模板中
 				}
 			}
@@ -103,7 +135,7 @@ public class PatternMatching {
 	}
 	//模式相似度计算
 	public void patternSimCom(String[] icArr,String[] isArr,String isEntityType,
-			TreeMap<Double, String> similar){
+			TreeMap<Double,String> similar){
 		if (icArr[1].equals(isEntityType)) {
 			/*相似度比较*/
 			//arrayList.toString变为字符串之后前后额外加有[],所以要去掉
