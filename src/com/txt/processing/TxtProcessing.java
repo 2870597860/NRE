@@ -29,14 +29,18 @@ public class TxtProcessing {
 				String Company=file.substring(preCom+"testdoing\\".length(), laterCom);
 				//读取文件内容
 				content=ReadFiles.readFiles(file);
-				
-				content=content.substring(content.indexOf("二、主营业务分析"), content.indexOf("十、接待调研"));
-				/*String[] str=content.split("五、投资状况");
-				for (int i = 0; i < str.length; i++) {
-					if(i==1){
-						str[i]="五、投资状况"+str[i];
+				int textStart=content.indexOf("主营业务分析");
+				int textEnd=content.indexOf("十、接待调研");
+				if (textStart<0) {
+					textStart=0;
+				}
+				if (textEnd<0) {
+					textEnd=content.indexOf("可能面对的风险");
+					if (textEnd<0) {
+						textEnd=content.length();
 					}
-				}*/
+				}
+				content=content.substring(textStart, textEnd);
 				wrt.writeCon(content,path+Company+".txt");
 			}
 
@@ -47,25 +51,4 @@ public class TxtProcessing {
 		}
 		System.out.println("处理完毕：");
 	}
-	/*在java中调用本机python脚本中的函数*/
-	/*public static void  usePython(){
-		//定义参数因为调用python出现python中模块找不到，也不知道该如何引用，
-		 * 所以还是将文本写到文件中，单独调用python程序运行，然后再写到文件中，java在读取。太麻烦了
-		PythonInterpreter.initialize(null, null, content);
-		PythonInterpreter interpreter = new PythonInterpreter(); 
-		//执行
-		interpreter.execfile("D:\\A_summer_install\\java\\workspace\\pytest\\src\\InterNameEntityRe.py");
-		PyFunction func = (PyFunction)interpreter.get("doing",PyFunction.class);
-		PyObject pyobj = func.__call__();
-		System.out.println(pyobj.toString());
-		try {
-			System.out.println("开始执行python：");  
-			Process proc = Runtime.getRuntime().exec("python  D:\\A_summer_install\\java\\workspace\\pytest\\src\\InterNameEntityRe.py");
-			proc.waitFor();
-		} catch (InterruptedException | IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}  
-		System.out.println("python执行结束");
-	}*/
 }

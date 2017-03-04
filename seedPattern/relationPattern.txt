@@ -1,0 +1,6 @@
+附属关系：
+<徽商银行股份有限公司:company_name SBV 为 VOB 参股公司*。>
+<徽商银行股份有限公司:company_name SBV 为 VOB 控股子公司*。>
+<人民制药:company_name SBV 实现 VOB 营业收入*, COO 实现 VOB 净利润*, COO 增长 VOB*。>
+<沈阳金建数字城市软件有限公司:company_name SBV 为 VOB 全资子公司*。>
+==

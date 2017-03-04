@@ -13,11 +13,12 @@ import java.util.regex.Pattern;
 
 
 public class ReadFiles {
-	//定义读取文件集合
-	static List<String> fileList = new ArrayList<String>();
+	
 	//读取目录中的所有文件
 	public static List<String> readDirs(String filepath) throws FileNotFoundException, IOException {
-        try {
+		//定义读取文件集合
+		List<String> fileList = new ArrayList<String>();
+		try {
             File file = new File(filepath);
             if (!file.isDirectory()) {
                 System.out.println("输入的参数应该为[文件夹名]");
@@ -48,11 +49,22 @@ public class ReadFiles {
 	        String line =null;
 	        String regEx = "['   ']+";//匹配文章中连续的多个空格
 			Pattern p = Pattern.compile(regEx);
-			
 	        while ((line=br.readLine()) != null) {
 	        	Matcher m = p.matcher(line);
 	        	line=m.replaceAll("  ");//将连续的多个空格删除只保留一个
-	            sb.append(line);
+				sb.append(line);
+	        }
+	        int index=0;
+	        int i=0;
+	        while(index<sb.length()){
+	        	index=4700;
+	        	i++;
+	        	index*=i;
+	        	if (index<sb.length()) {
+	        		int indexSpace=sb.lastIndexOf(" ", index);
+	        		sb.insert(indexSpace, "**");
+				}
+	        	
 	        }
 	        br.close(); 
 	        return sb.toString();

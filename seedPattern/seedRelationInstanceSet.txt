@@ -1,5 +1,4 @@
-<客户关系,company_name、org_name,销售、客户、金额>
+<客户关系,company_name、org_name,资料、销售、客户、金额、合计、情况、总额>
 <供应商关系,company_name、org_name,供应、采购、供应商>
 <技术研发,product_name,研发、投入、项目、注册、技术>
-<控股母公司,company_name、org_name,募集、招募>
-<控股子公司,company_name、org_name,分、利润、分红款、红款>
+<附属关系,company_name、org_name,分、利润、分红款、红款、控股、净利润、收益、子公司、参股>

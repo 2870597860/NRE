@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xml4nlp>
+    <note sent="y" word="y" pos="y" ne="n" parser="y" semparser="n" lstmsemparser="n" wsd="n" srl="n" />
+    <doc>
+        <para id="0">
+            <sent id="0" cont="人民制药实现营业收入4,291.68万元，同比增长29.69%，实现净利润237.88万元，同比增长33.58%。">
+                <word id="0" cont="人民" pos="n" parent="2" relate="SBV" />
+                <word id="1" cont="制药" pos="v" parent="2" relate="SBV" />
+                <word id="2" cont="实现" pos="v" parent="-1" relate="HED" />
+                <word id="3" cont="营业" pos="v" parent="4" relate="ATT" />
+                <word id="4" cont="收入" pos="n" parent="5" relate="ATT" />
+                <word id="5" cont="4" pos="m" parent="2" relate="VOB" />
+                <word id="6" cont="," pos="wp" parent="2" relate="WP" />
+                <word id="7" cont="291.68万" pos="m" parent="8" relate="ATT" />
+                <word id="8" cont="元" pos="q" parent="11" relate="SBV" />
+                <word id="9" cont="，" pos="wp" parent="8" relate="WP" />
+                <word id="10" cont="同比" pos="j" parent="11" relate="ADV" />
+                <word id="11" cont="增长" pos="v" parent="2" relate="COO" />
+                <word id="12" cont="29.69%" pos="m" parent="11" relate="VOB" />
+                <word id="13" cont="，" pos="wp" parent="11" relate="WP" />
+                <word id="14" cont="实现" pos="v" parent="11" relate="COO" />
+                <word id="15" cont="净利润" pos="n" parent="17" relate="ATT" />
+                <word id="16" cont="237.88万" pos="m" parent="17" relate="ATT" />
+                <word id="17" cont="元" pos="q" parent="14" relate="VOB" />
+                <word id="18" cont="，" pos="wp" parent="14" relate="WP" />
+                <word id="19" cont="同比" pos="j" parent="20" relate="ADV" />
+                <word id="20" cont="增长" pos="v" parent="14" relate="COO" />
+                <word id="21" cont="33.58%" pos="m" parent="20" relate="VOB" />
+                <word id="22" cont="。" pos="wp" parent="2" relate="WP" />
+            </sent>
+            <sent id="1" cont="广安凯特实现营业收入8,354.39万元，同比增长29.93%，实现净利润510.50万元，同比增长64.91%。">
+                <word id="0" cont="广安" pos="ns" parent="1" relate="ATT" />
+                <word id="1" cont="凯特" pos="nh" parent="2" relate="SBV" />
+                <word id="2" cont="实现" pos="v" parent="-1" relate="HED" />
+                <word id="3" cont="营业" pos="v" parent="4" relate="ATT" />
+                <word id="4" cont="收入" pos="n" parent="5" relate="ATT" />
+                <word id="5" cont="8" pos="m" parent="2" relate="VOB" />
+                <word id="6" cont="," pos="wp" parent="2" relate="WP" />
+                <word id="7" cont="354.39万" pos="m" parent="8" relate="ATT" />
+                <word id="8" cont="元" pos="q" parent="11" relate="SBV" />
+                <word id="9" cont="，" pos="wp" parent="8" relate="WP" />
+                <word id="10" cont="同比" pos="j" parent="11" relate="ADV" />
+                <word id="11" cont="增长" pos="v" parent="2" relate="COO" />
+                <word id="12" cont="29.93%" pos="m" parent="11" relate="VOB" />
+                <word id="13" cont="，" pos="wp" parent="11" relate="WP" />
+                <word id="14" cont="实现" pos="v" parent="11" relate="COO" />
+                <word id="15" cont="净利润" pos="n" parent="17" relate="ATT" />
+                <word id="16" cont="510.50万" pos="m" parent="17" relate="ATT" />
+                <word id="17" cont="元" pos="q" parent="14" relate="VOB" />
+                <word id="18" cont="，" pos="wp" parent="14" relate="WP" />
+                <word id="19" cont="同比" pos="j" parent="20" relate="ADV" />
+                <word id="20" cont="增长" pos="v" parent="14" relate="COO" />
+                <word id="21" cont="64.91%" pos="m" parent="20" relate="VOB" />
+                <word id="22" cont="。" pos="wp" parent="2" relate="WP" />
+            </sent>
+            <sent id="2" cont="庆余堂实现营业收入21,592.15万元，较去年同期下降0.53%，实现净利润339.31万元，较去年同期下降65.92%。">
+                <word id="0" cont="庆余堂" pos="nh" parent="1" relate="SBV" />
+                <word id="1" cont="实现" pos="v" parent="-1" relate="HED" />
+                <word id="2" cont="营业" pos="v" parent="3" relate="ATT" />
+                <word id="3" cont="收入" pos="n" parent="4" relate="ATT" />
+                <word id="4" cont="21" pos="m" parent="1" relate="VOB" />
+                <word id="5" cont="," pos="wp" parent="1" relate="WP" />
+                <word id="6" cont="59" pos="m" parent="7" relate="ATT" />
+                <word id="7" cont="2.15万" pos="m" parent="8" relate="ATT" />
+                <word id="8" cont="元" pos="q" parent="13" relate="SBV" />
+                <word id="9" cont="，" pos="wp" parent="8" relate="WP" />
+                <word id="10" cont="较" pos="p" parent="13" relate="ADV" />
+                <word id="11" cont="去年" pos="nt" parent="12" relate="ATT" />
+                <word id="12" cont="同期" pos="nd" parent="10" relate="POB" />
+                <word id="13" cont="下降" pos="v" parent="1" relate="COO" />
+                <word id="14" cont="0.53%" pos="m" parent="13" relate="CMP" />
+                <word id="15" cont="，" pos="wp" parent="13" relate="WP" />
+                <word id="16" cont="实现" pos="v" parent="13" relate="COO" />
+                <word id="17" cont="净利润" pos="n" parent="19" relate="ATT" />
+                <word id="18" cont="339.31万" pos="m" parent="19" relate="ATT" />
+                <word id="19" cont="元" pos="q" parent="16" relate="VOB" />
+                <word id="20" cont="，" pos="wp" parent="16" relate="WP" />
+                <word id="21" cont="较" pos="p" parent="24" relate="ADV" />
+                <word id="22" cont="去年" pos="nt" parent="23" relate="ATT" />
+                <word id="23" cont="同期" pos="nd" parent="21" relate="POB" />
+                <word id="24" cont="下降" pos="v" parent="16" relate="COO" />
+                <word id="25" cont="65.92%" pos="m" parent="24" relate="VOB" />
+                <word id="26" cont="。" pos="wp" parent="1" relate="WP" />
+            </sent>
+            <sent id="3" cont="福安药业集团宁波天衡制药有限公司于2015年4月23日完成对宁波天衡的收购重组工作，并于2015年5月纳入集团合并范围。">
+                <word id="0" cont="福安" pos="nz" parent="2" relate="ATT" />
+                <word id="1" cont="药业" pos="n" parent="2" relate="ATT" />
+                <word id="2" cont="集团" pos="n" parent="3" relate="ATT" />
+                <word id="3" cont="宁波" pos="ns" parent="6" relate="ATT" />
+                <word id="4" cont="天衡" pos="nz" parent="6" relate="ATT" />
+                <word id="5" cont="制药" pos="v" parent="6" relate="ATT" />
+                <word id="6" cont="有限公司" pos="n" parent="11" relate="SBV" />
+                <word id="7" cont="于" pos="p" parent="11" relate="ADV" />
+                <word id="8" cont="2015年" pos="nt" parent="9" relate="ATT" />
+                <word id="9" cont="4月" pos="nt" parent="10" relate="ATT" />
+                <word id="10" cont="23日" pos="nt" parent="7" relate="POB" />
+                <word id="11" cont="完成" pos="v" parent="-1" relate="HED" />
+                <word id="12" cont="对" pos="p" parent="18" relate="ATT" />
+                <word id="13" cont="宁波" pos="ns" parent="14" relate="ATT" />
+                <word id="14" cont="天衡" pos="nz" parent="12" relate="POB" />
+                <word id="15" cont="的" pos="u" parent="12" relate="RAD" />
+                <word id="16" cont="收购" pos="v" parent="18" relate="ATT" />
+                <word id="17" cont="重组" pos="v" parent="16" relate="COO" />
+                <word id="18" cont="工作" pos="v" parent="11" relate="VOB" />
+                <word id="19" cont="，" pos="wp" parent="11" relate="WP" />
+                <word id="20" cont="并" pos="c" parent="24" relate="ADV" />
+                <word id="21" cont="于" pos="p" parent="24" relate="ADV" />
+                <word id="22" cont="2015年" pos="nt" parent="23" relate="ATT" />
+                <word id="23" cont="5月" pos="nt" parent="21" relate="POB" />
+                <word id="24" cont="纳入" pos="v" parent="11" relate="COO" />
+                <word id="25" cont="集团" pos="n" parent="27" relate="ATT" />
+                <word id="26" cont="合并" pos="v" parent="27" relate="ATT" />
+                <word id="27" cont="范围" pos="n" parent="24" relate="VOB" />
+                <word id="28" cont="。" pos="wp" parent="11" relate="WP" />
+            </sent>
+        </para>
+    </doc>
+</xml4nlp>

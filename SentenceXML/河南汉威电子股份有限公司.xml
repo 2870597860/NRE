@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xml4nlp>
+    <note sent="y" word="y" pos="y" ne="n" parser="y" semparser="n" lstmsemparser="n" wsd="n" srl="n" />
+    <doc>
+        <para id="0">
+            <sent id="0" cont="嘉园环保有限公司为本公司的控股子公司，注册资本6,000万元。">
+                <word id="0" cont="嘉园" pos="nz" parent="2" relate="ATT" />
+                <word id="1" cont="环保" pos="j" parent="2" relate="ATT" />
+                <word id="2" cont="有限公司" pos="n" parent="3" relate="SBV" />
+                <word id="3" cont="为" pos="p" parent="-1" relate="HED" />
+                <word id="4" cont="本" pos="r" parent="5" relate="ATT" />
+                <word id="5" cont="公司" pos="n" parent="8" relate="ATT" />
+                <word id="6" cont="的" pos="u" parent="5" relate="RAD" />
+                <word id="7" cont="控股" pos="v" parent="8" relate="ATT" />
+                <word id="8" cont="子公司" pos="n" parent="3" relate="POB" />
+                <word id="9" cont="，" pos="wp" parent="3" relate="WP" />
+                <word id="10" cont="注册" pos="v" parent="11" relate="ATT" />
+                <word id="11" cont="资本" pos="n" parent="12" relate="ATT" />
+                <word id="12" cont="6" pos="m" parent="3" relate="COO" />
+                <word id="13" cont="," pos="wp" parent="12" relate="WP" />
+                <word id="14" cont="000万" pos="m" parent="15" relate="ATT" />
+                <word id="15" cont="元" pos="q" parent="12" relate="COO" />
+                <word id="16" cont="。" pos="wp" parent="3" relate="WP" />
+            </sent>
+            <sent id="1" cont="汉威公用事业科技有限公司汉威公用为公司的控股子公司，注册资本10,000万元。">
+                <word id="0" cont="汉威" pos="nz" parent="3" relate="ATT" />
+                <word id="1" cont="公用事业" pos="i" parent="3" relate="ATT" />
+                <word id="2" cont="科技" pos="n" parent="3" relate="ATT" />
+                <word id="3" cont="有限公司" pos="n" parent="5" relate="SBV" />
+                <word id="4" cont="汉威" pos="nz" parent="5" relate="SBV" />
+                <word id="5" cont="公用" pos="v" parent="-1" relate="HED" />
+                <word id="6" cont="为" pos="v" parent="5" relate="CMP" />
+                <word id="7" cont="公司" pos="n" parent="10" relate="ATT" />
+                <word id="8" cont="的" pos="u" parent="7" relate="RAD" />
+                <word id="9" cont="控股" pos="v" parent="10" relate="ATT" />
+                <word id="10" cont="子公司" pos="n" parent="6" relate="VOB" />
+                <word id="11" cont="，" pos="wp" parent="5" relate="WP" />
+                <word id="12" cont="注册" pos="v" parent="13" relate="ATT" />
+                <word id="13" cont="资本" pos="n" parent="14" relate="ATT" />
+                <word id="14" cont="10" pos="m" parent="5" relate="COO" />
+                <word id="15" cont="," pos="wp" parent="14" relate="WP" />
+                <word id="16" cont="000万" pos="m" parent="17" relate="ATT" />
+                <word id="17" cont="元" pos="q" parent="14" relate="COO" />
+                <word id="18" cont="。" pos="wp" parent="5" relate="WP" />
+            </sent>
+            <sent id="2" cont="沈阳金建数字城市软件有限公司为公司的全资子公司，注册资本1,100万元。">
+                <word id="0" cont="沈阳" pos="ns" parent="5" relate="ATT" />
+                <word id="1" cont="金建" pos="ns" parent="2" relate="ATT" />
+                <word id="2" cont="数字" pos="n" parent="3" relate="ATT" />
+                <word id="3" cont="城市" pos="n" parent="4" relate="ATT" />
+                <word id="4" cont="软件" pos="n" parent="5" relate="ATT" />
+                <word id="5" cont="有限公司" pos="n" parent="6" relate="SBV" />
+                <word id="6" cont="为" pos="v" parent="-1" relate="HED" />
+                <word id="7" cont="公司" pos="n" parent="10" relate="ATT" />
+                <word id="8" cont="的" pos="u" parent="7" relate="RAD" />
+                <word id="9" cont="全资" pos="n" parent="10" relate="ATT" />
+                <word id="10" cont="子公司" pos="n" parent="6" relate="VOB" />
+                <word id="11" cont="，" pos="wp" parent="6" relate="WP" />
+                <word id="12" cont="注册" pos="v" parent="13" relate="ATT" />
+                <word id="13" cont="资本" pos="n" parent="14" relate="ATT" />
+                <word id="14" cont="1" pos="m" parent="6" relate="COO" />
+                <word id="15" cont="," pos="wp" parent="14" relate="WP" />
+                <word id="16" cont="100万" pos="m" parent="17" relate="ATT" />
+                <word id="17" cont="元" pos="q" parent="14" relate="COO" />
+                <word id="18" cont="。" pos="wp" parent="6" relate="WP" />
+            </sent>
+            <sent id="3" cont="郑州汉威公用事业科技有限公司为公司的控股子公司，注册资本10,000万元。">
+                <word id="0" cont="郑州" pos="ns" parent="4" relate="ATT" />
+                <word id="1" cont="汉威" pos="nz" parent="4" relate="ATT" />
+                <word id="2" cont="公用事业" pos="i" parent="4" relate="ATT" />
+                <word id="3" cont="科技" pos="n" parent="4" relate="ATT" />
+                <word id="4" cont="有限公司" pos="n" parent="5" relate="SBV" />
+                <word id="5" cont="为" pos="v" parent="-1" relate="HED" />
+                <word id="6" cont="公司" pos="n" parent="9" relate="ATT" />
+                <word id="7" cont="的" pos="u" parent="6" relate="RAD" />
+                <word id="8" cont="控股" pos="v" parent="9" relate="ATT" />
+                <word id="9" cont="子公司" pos="n" parent="5" relate="VOB" />
+                <word id="10" cont="，" pos="wp" parent="5" relate="WP" />
+                <word id="11" cont="注册" pos="v" parent="12" relate="ATT" />
+                <word id="12" cont="资本" pos="n" parent="13" relate="ATT" />
+                <word id="13" cont="10" pos="m" parent="5" relate="COO" />
+                <word id="14" cont="," pos="wp" parent="13" relate="WP" />
+                <word id="15" cont="000万" pos="m" parent="16" relate="ATT" />
+                <word id="16" cont="元" pos="q" parent="13" relate="COO" />
+                <word id="17" cont="。" pos="wp" parent="5" relate="WP" />
+            </sent>
+        </para>
+    </doc>
+</xml4nlp>

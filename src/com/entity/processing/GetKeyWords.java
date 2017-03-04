@@ -5,6 +5,7 @@ import java.util.Map;
 import org.fnlp.app.keyword.AbstractExtractor;
 import org.fnlp.app.keyword.WordExtract;
 
+import edu.fudan.ml.types.Dictionary;
 import edu.fudan.nlp.cn.tag.CWSTagger;
 import edu.fudan.nlp.corpus.StopWords;
 
@@ -15,10 +16,9 @@ import edu.fudan.nlp.corpus.StopWords;
  */
 public class GetKeyWords {
 	public ArrayList<String> GetKeyword(String News,int keyWordsNumber) throws Exception{
-		
 		ArrayList<String> keywords=new ArrayList<String>();
 		StopWords sw= new StopWords("models/stopwords");//使用词库停用词等
-		CWSTagger seg = new CWSTagger("models/seg.m");//分词器
+		CWSTagger seg = new CWSTagger("./models/seg.m", new Dictionary("./models/dict.txt"));
 		AbstractExtractor key = new WordExtract(seg,sw);
 		//you need to set the keywords number, here you will get 10 keywords
 		Map<String , Integer> ans=key.extract(News, keyWordsNumber);//到提取到的关键字是作为一个Map保存起来的

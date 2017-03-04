@@ -24,13 +24,13 @@ public class RWText {
 				if (company.equals(Company)) {
 					//读取文件内容
 					content=ReadFiles.readFiles(file);
-				}
+				} 
 			}
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		System.out.println("text读取完毕：");
+		System.out.println(company+"...的内容读取完毕：");
 		return content;
 	}
 }

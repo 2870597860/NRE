@@ -80,12 +80,16 @@ public class Similarity {
         String[] ske = {"资料","销售 ","金额","合计","供应商","总额","比例","客户","情况"}; 
         String[] s1 = {"供应","供应商","采购"};  
         String[] s2 = {"销售","客户","金额"};
+        String[] s3 = {"资料","销售","客户","金额","合计","情况","总额"};
+        String[] s4 = {"前五名","客户","情况","收入","营业"};
+        String[] s5 = {"子公司"};
+        String[] s6 = {"公司"};
         
-        Similarity similarity = new Similarity(s2, sgong); 
-        Similarity similarity2 = new Similarity(s2, ske); 
+        Similarity similarity = new Similarity(s3, sgong); 
+        Similarity similarity2 = new Similarity(s5, s6); 
         double sim=similarity.sim();
         double sim2=similarity2.sim();
-        System.out.println(sim+" "+sim2);  
+        System.out.println(";;;;"+sim+" "+sim2);  
     }  
   
 }  

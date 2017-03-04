@@ -11,6 +11,7 @@ import java.io.UnsupportedEncodingException;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Set;
+import java.util.TreeMap;
 import java.util.TreeSet;
 import com.txt.processing.ReadFiles;
 import com.txt.processing.WriteContent;
@@ -48,8 +49,16 @@ public class GetEntityMain {
 		/*//建立特征向量
 		BuildVector bv=new BuildVector(); 
 		bv.extractFeature(entityMap);*/
-		GetSentences getSentence=new GetSentences();
-		getSentence.getEntitySentence(entityMap);
+		doProcessing(entityMap);
+	}
+	//开始对获取的每个公司年报的实体进行处理
+	public static void doProcessing(HashMap<String, TreeSet<String>> entityMap){
+		PatternMatching pm=new PatternMatching();
+		RelationPattern rp=new RelationPattern();
+		GetSentences gs=new GetSentences();
+		HashMap<String, HashMap<String, List<String>>> sentenceMap=gs.getEntitySentence(entityMap);
+		HashMap<String, List<String>> relationPattern=rp.getCorpusPattern(sentenceMap);
+		pm.seedPattternAndSentenceMap(relationPattern);
 		System.out.println("处理完毕：");
 	}
 	public static String readEntity(String filePath){
@@ -85,7 +94,7 @@ public class GetEntityMain {
 		StringBuilder sb=new StringBuilder();
 		String[] entity=content.split("\r\n");
 		for (String string : entity) {
-			if (string.contains("product_name")||string.contains("company_name")) {
+			if (string.contains("product_name")||string.contains("company_name")||string.contains("org_name")) {
 				if (!string.contains(".")) {
 					String str=string.replaceAll("\\d+", "");//去掉字符串子所有的数字
 					if(str.contains("product_name")){
@@ -95,6 +104,10 @@ public class GetEntityMain {
 					if(str.contains("company_name")){
 						sb.append(str);
 						sb.insert(sb.indexOf("c"), "、");
+					}
+					if (str.contains("org_name")) {
+						sb.append(str);
+						sb.insert(sb.indexOf("o"), "、");
 					}
 					set.add(sb.toString());
 					sb.delete(0, sb.length());

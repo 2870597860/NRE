@@ -119,12 +119,23 @@ public class test {
 		String fles="company_name 有 向外 无";
 		String[] arrts=fles.split(" ");
 		System.out.println(arrts.toString());*/
-		TreeMap< String,Double> similar=new TreeMap<>(new MycomplaPattern1());
+		/*TreeMap< String,Double> similar=new TreeMap<>(new MycomplaPattern1());
 		similar.put("A", 2.345);
 		similar.put("F", 4.345);
 		similar.put("D", 1.345);
 		similar.put("C", 0.345);
-		System.out.println(similar);
+		System.out.println(similar);*/
+		StringBuilder sb=new StringBuilder();
+		sb.append("dsafdsa");
+		sb.append("\n");
+		sb.append("dasdsa");
+		sb.append("放水电费");
+		sb.append("飞娃儿");
+		System.out.println(sb.toString());
+		StringBuffer sb1=new StringBuffer();
+		sb1.append("id有什么类方法可以直接实现的吗jdfkjh");
+		sb1.insert(0,"代");
+		System.out.println(sb1);
 	}
 }
 class colp implements Comparator<Double>{

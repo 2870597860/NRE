@@ -19,7 +19,7 @@ import com.txt.processing.WriteContent;
 import edu.fudan.example.nlp.DepParser;
 
 /**
- * 建立需要的特征向量
+ * 建立需要的特征向量、、、、、、未被使用
  * @author Administrator
  *
  */
