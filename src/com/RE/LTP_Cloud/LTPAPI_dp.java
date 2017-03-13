@@ -6,7 +6,6 @@ import java.net.HttpURLConnection;
 import java.net.URL;  
 import java.net.URLEncoder;
 
-import org.python.antlr.ast.Slice.Slice___init___exposer;  
 public class LTPAPI_dp {
 	public static StringBuffer sentenceDP(String text)throws IOException{  
 		String api_key = "z8z4W3E6zCgisEkzqf7dAdgYleZrSPbWiVFGXMUy";//api_key,申请账号后生成，这个账户每月有19G流量  
@@ -62,10 +61,11 @@ public class LTPAPI_dp {
 		return sb;  
 	} 
 	public static void main(String[] args) {
-		String text = "上海华拓成立于 2000 年 6 月 28 日，注册资本 17,100 万元，2014 年 2 月公司通过非同一控制方式购买上海华拓 98.86%股权，2015 年 8 月公司继续收购其 1.14% 少数股东权益。";
+		String text = "报告期内，长安福特，长安马自达销量增加，导致净利润均同比有较大增长。";
 		try {
 			//sentenceDP(text);
-			sentenceDP(text);
+			StringBuffer sbb=sentenceDP(text);
+			System.out.println(sbb);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			System.out.println(text+"分析失败");

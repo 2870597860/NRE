@@ -57,9 +57,11 @@ public class DomParse {
 					if (SBVChazhi==1) {
 						sbRP.delete(index,sbRP.indexOf("SBV",index)+"SBV ".length());
 					}else {
-						System.out.println();
+						//System.out.println();
 						int secondMaoHao=sbRP.indexOf(":",index+":".length());
-						sbRP.delete(secondMaoHao,sbRP.indexOf("SBV", secondMaoHao)+"SBV ".length());
+						if (secondMaoHao>0) {
+							sbRP.delete(secondMaoHao,sbRP.indexOf("SBV", secondMaoHao)+"SBV ".length());
+						}
 						//sbRP.append(",");
 					}
 					idSBVSet.remove(ids);
@@ -163,16 +165,16 @@ public class DomParse {
 		if (flag) {
 			String testStr=sbCache.toString();
 			//System.out.println(testStr);	
-			if (sbCache.toString().equals("人民制药")) {
+			/*if (sbCache.toString().equals("人民制药")) {
 				System.out.println(sbCache);
-			}
+			}*/
 			String entityType=getET.startRead(company).get(sbCache.toString());//获取实体对应的实体类型
 			sbCache.append(":"+entityType);
 		}
 		sbRP.append(sbCache.toString());
-		System.out.println(sbCache);
+		/*System.out.println(sbCache);
 		System.out.println(treeMap);//输出
-	}
+*/	}
 	/**
 	 * 获取sbv整个相关联词语（就是实体名）
 	 * @param wordNodeList 句子（节点sent）下的所有word节点（包含属性
@@ -187,13 +189,13 @@ public class DomParse {
 				//String subId=wordNode.attributeValue("id");
 				String subParent=wordNode.attributeValue("parent");
 				String subrelate=wordNode.attributeValue("relate");
-				if (Integer.parseInt(sbvId)==Integer.parseInt(subParent)) {
+				//if (Integer.parseInt(sbvId)==Integer.parseInt(subParent)) {
 					if ((Integer.parseInt(sbvId)-Integer.parseInt(subId))==1&&
 							subrelate.equals("ATT")) {
 						treeMap.put(Integer.parseInt(subId), wordNode.attributeValue("cont"));
 						diguiGet_cont(wordNodeList, subId, treeMap);
 					}
-				}
+				//}
 			}
 		}
 		return treeMap;
@@ -209,7 +211,6 @@ public class DomParse {
 					diguiGet_cont(wordNodeList,subId,treeMap);
 				}
 			}
-
 		}
 	}
 	public  Element findDocNode(Element root){
@@ -225,7 +226,7 @@ public class DomParse {
 
 	}
 
-	public List<String> ParseStart(Document document){
+	public List<String> ParseStart(Document document,int[] count){
 		//解析XML形式的文本,得到document对象.                
 		/*try {
 			document = DocumentHelper.parseText(sbSentenceSet);
@@ -255,6 +256,7 @@ public class DomParse {
 					}
 					getSBV_VOB_DP(wordNodeList,arrList);
 				}
+				count[0]+=i;
 			}
 		}
 		return arrList;
@@ -278,21 +280,24 @@ public class DomParse {
 			e1.printStackTrace();
 		}
 		if (fileLists.size()>0) {
+			int[] count=new int[1];
+			count[0]=0;
 			for (String file : fileLists){
 				int len=file.indexOf("\\SentenceXML\\");
 				company=file.substring(len+"\\SentenceXML\\".length(),
 						file.indexOf(".xml"));
-				System.out.println(company);
+				System.out.println("\n========="+company+":");
 				try {
 					document = saxReader.read(new File(file));
-					List<String> xmlParseResult=ParseStart(document);
-					System.out.println(xmlParseResult);
+					List<String> xmlParseResult=ParseStart(document,count);
+					//System.out.println(xmlParseResult);
 					xmlParseResults.put(company, xmlParseResult);
 				} catch (DocumentException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
 			}
+			System.out.println("读取文本句子的关系模式总数为："+count[0]);
 		}
 		return xmlParseResults;
 	}
@@ -319,9 +324,11 @@ public class DomParse {
 				+ "</xml4nlp>";
 		DomParse dp=new DomParse();
 		File filetest=new File("test.xml");
+		int[] count=new int[1];
+		count[0]=0;
 		SAXReader saxReader = new SAXReader();
 		Document documenttest = saxReader.read(filetest);
-		dp.ParseStart(documenttest);
+		dp.ParseStart(documenttest,count);
 		//dp.XMLParseStart(sentence);
 	}
 }

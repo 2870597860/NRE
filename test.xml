@@ -232,6 +232,76 @@
                 <word id="37" cont="权益" pos="n" parent="32" relate="VOB" />
                 <word id="38" cont="。" pos="wp" parent="2" relate="WP" />
             </sent>
+            <sent id="0" cont="报告期内，长安福特，长安马自达销量增加，导致净利润均同比有较大增长。">
+                <word id="0" cont="报告期" pos="n" parent="1" relate="ATT" />
+                <word id="1" cont="内" pos="nd" parent="9" relate="ADV" />
+                <word id="2" cont="，" pos="wp" parent="1" relate="WP" />
+                <word id="3" cont="长安" pos="ns" parent="4" relate="ATT" />
+                <word id="4" cont="福特" pos="nz" parent="9" relate="SBV" />
+                <word id="5" cont="，" pos="wp" parent="4" relate="WP" />
+                <word id="6" cont="长安" pos="nz" parent="7" relate="ATT" />
+                <word id="7" cont="马自达" pos="nz" parent="8" relate="ATT" />
+                <word id="8" cont="销量" pos="n" parent="9" relate="SBV" />
+                <word id="9" cont="增加" pos="v" parent="-1" relate="HED" />
+                <word id="10" cont="，" pos="wp" parent="9" relate="WP" />
+                <word id="11" cont="导致" pos="v" parent="9" relate="COO" />
+                <word id="12" cont="净利润" pos="n" parent="15" relate="SBV" />
+                <word id="13" cont="均" pos="d" parent="15" relate="ADV" />
+                <word id="14" cont="同比" pos="j" parent="15" relate="ADV" />
+                <word id="15" cont="有" pos="v" parent="11" relate="VOB" />
+                <word id="16" cont="较" pos="d" parent="17" relate="ADV" />
+                <word id="17" cont="大" pos="a" parent="18" relate="ADV" />
+                <word id="18" cont="增长" pos="v" parent="15" relate="VOB" />
+                <word id="19" cont="。" pos="wp" parent="9" relate="WP" />
+            </sent>
+             <sent id="10" cont="长春一汽富维海拉车灯有限公司，注册资本 为20,000 万人民币，我公司占 51%股权。">
+                <word id="0" cont="长春" pos="ns" parent="1" relate="ATT" />
+                <word id="1" cont="一汽" pos="j" parent="2" relate="ATT" />
+                <word id="2" cont="富维海" pos="nz" parent="7" relate="ATT" />
+                <word id="3" cont="拉" pos="v" parent="7" relate="ATT" />
+                <word id="4" cont="车灯" pos="n" parent="5" relate="ATT" />
+                <word id="5" cont="有限公司" pos="n" parent="9" relate="SBV" />
+                <word id="6" cont="，" pos="wp" parent="5" relate="WP" />
+                <word id="7" cont="注册" pos="v" parent="8" relate="ATT" />
+                <word id="8" cont="资本" pos="n" parent="9" relate="SBV" />
+                <word id="9" cont="为" pos="v" parent="-1" relate="HED" />
+                <word id="10" cont="20" pos="m" parent="9" relate="VOB" />
+                <word id="11" cont="," pos="wp" parent="9" relate="WP" />
+                <word id="12" cont="000万" pos="m" parent="13" relate="ATT" />
+                <word id="13" cont="人民币" pos="n" parent="17" relate="SBV" />
+                <word id="14" cont="，" pos="wp" parent="13" relate="WP" />
+                <word id="15" cont="我" pos="r" parent="16" relate="ATT" />
+                <word id="16" cont="公司" pos="n" parent="17" relate="SBV" />
+                <word id="17" cont="占" pos="v" parent="9" relate="COO" />
+                <word id="18" cont="51%" pos="m" parent="19" relate="ATT" />
+                <word id="19" cont="股权" pos="n" parent="17" relate="VOB" />
+                <word id="20" cont="。" pos="wp" parent="9" relate="WP" />
+            </sent>
+             <sent id="9" cont="长春一汽富维江森自控汽车金属零部件有限公司，注册资本为 2,460 万美元，我公司占50%股权。">
+                <word id="0" cont="长春" pos="ns" parent="2" relate="ATT" />
+                <word id="1" cont="一汽" pos="j" parent="2" relate="ATT" />
+                <word id="2" cont="富维江森" pos="nz" parent="7" relate="ATT" />
+                <word id="3" cont="自控" pos="v" parent="7" relate="ATT" />
+                <word id="4" cont="汽车" pos="n" parent="6" relate="ATT" />
+                <word id="5" cont="金属" pos="n" parent="6" relate="ATT" />
+                <word id="6" cont="零部件" pos="n" parent="7" relate="ATT" />
+                <word id="7" cont="有限公司" pos="n" parent="11" relate="SBV" />
+                <word id="8" cont="，" pos="wp" parent="7" relate="WP" />
+                <word id="9" cont="注册" pos="v" parent="10" relate="ATT" />
+                <word id="10" cont="资本" pos="n" parent="11" relate="SBV" />
+                <word id="11" cont="为" pos="v" parent="-1" relate="HED" />
+                <word id="12" cont="2" pos="m" parent="11" relate="VOB" />
+                <word id="13" cont="," pos="wp" parent="11" relate="WP" />
+                <word id="14" cont="460万" pos="m" parent="15" relate="ATT" />
+                <word id="15" cont="美元" pos="q" parent="19" relate="ADV" />
+                <word id="16" cont="，" pos="wp" parent="15" relate="WP" />
+                <word id="17" cont="我" pos="r" parent="18" relate="ATT" />
+                <word id="18" cont="公司" pos="n" parent="19" relate="SBV" />
+                <word id="19" cont="占" pos="v" parent="11" relate="COO" />
+                <word id="20" cont="50%" pos="m" parent="21" relate="ATT" />
+                <word id="21" cont="股权" pos="n" parent="19" relate="VOB" />
+                <word id="22" cont="。" pos="wp" parent="11" relate="WP" />
+            </sent>
 		</para>
 	</doc>
 </xml4nlp>

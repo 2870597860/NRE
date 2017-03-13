@@ -16,9 +16,9 @@ public class FindTextSetence {
 				/*if (sentence.contains("福安药业集团宁波天衡制药有限公司")) {
 					System.out.println(sentence);
 				}*/
-				Pattern p = Pattern.compile("\\s*|\t|\r|\n");
+				Pattern p = Pattern.compile("\t|\r|\n");
 				Matcher m = p.matcher(sentence);
-				sentence = m.replaceAll("");
+				sentence = m.replaceAll("").replaceAll(" +"," ");//将多个空格替换为一个空格必须用replaceAll
 				//System.out.println(sentence);
 			}
 		}

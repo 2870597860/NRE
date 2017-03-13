@@ -5,7 +5,7 @@
 	<classpathentry kind="lib" path="lib/jython-2.5.0.jar"/>
 	<classpathentry kind="lib" path="lib/fudannlp.jar"/>
 	<classpathentry kind="lib" path="lib/trove.jar"/>
-	<classpathentry kind="lib" path="lib/dom4j-1.6.1.jar"/>
+	<classpathentry kind="lib" path="lib/dom4j-1.6.1.jar" sourcepath="D:/A_summer_install/java/java外来库/apache-maven-3.3.9/Repository/dom4j/dom4j/1.6.1/dom4j-1.6.1-sources.jar"/>
 	<classpathentry kind="lib" path="lib/unirest-java-1.4.9.jar" sourcepath="D:/A_summer_install/java/java外来库/unirest-java-master.zip"/>
 	<classpathentry kind="lib" path="lib/json-20160810.jar"/>
 	<classpathentry kind="lib" path="lib/nerlib/commons-codec-1.9.jar"/>
@@ -25,5 +25,8 @@
 	<classpathentry kind="lib" path="lib/nerlib/httpcore-nio-4.4.6.jar"/>
 	<classpathentry kind="lib" path="lib/commons-io-2.4.jar"/>
 	<classpathentry kind="lib" path="lib/jieba-analysis-1.0.3-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="lib/commons-collections4-4.1.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/Hibernate435"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/Mysql"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

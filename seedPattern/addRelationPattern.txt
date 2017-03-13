@@ -1,0 +1,14 @@
+附属关系:
+徽商银行股份有限公司:company_name SBV 为 VOB 参股公司*。
+徽商银行股份有限公司:company_name SBV 为 VOB 控股子公司*。
+人民制药:company_name SBV 实现 VOB 营业收入*, COO 实现 VOB 净利润*, COO 增长 VOB*。
+沈阳金建数字城市软件有限公司:company_name SBV 为 VOB 全资子公司*。
+庆余堂:company_name SBV 实现 VOB 营业收入21 * , COO 下降 VOB 65.92% * 。
+福安药业集团宁波天衡制药有限公司:company_name SBV 完成 POB 对宁波天衡 * , COO 纳入 VOB 集团合并范围 * 。
+Meta-FinS.p.A:company_name SBV 股份买卖协议公司初步价格 POB 收购 * 是 POB 传统 * 财务状况净值 VOB 确定 * , COO 确认MetaSystemS.p.A财务状况净值 POB 346.5万欧元 *  VOB 确定 * 收购 VOB 价款 *  VOB 为 *  VOB 6 * , COO 028.5万欧元, COO 折 VOB 人民币 *  VOB 423 * , COO 608, COO 862.00元。
+深圳华麟电路技术有限公司:company_name SBV 元报告期公司, COO 持有 VOB 其100%股权 * 。
+长安福特:company_name SBV 长安马自达销量增加, COO 导致净利润 VOB 有 * 。
+中国第一汽车集团:company_name SBV , COO 其他中国银行业监督, COO 管理委员会 VOB 金融业务 * 。
+吉林亿安保险经纪股份有限公司:company_name SBV 注册资本为 VOB 1 * 。
+长春一汽富维东阳汽车塑料零部件有限公司:company_name SBV 注册资本为 VOB 2 * , COO 相关汽车零部件, COO 塑料制品, COO 开发, COO 制造, COO 售后服务。
+江森自控汽车饰件系统有限公司:company_name SBV 注册资本为 VOB 5960万美元 * 。

@@ -76,7 +76,6 @@ public class Simhash {
 	public boolean isDuplicate(String content,int[] hamm) {
 		Long simhash = calSimhash(content);
 		List<String> lFrac = splitSimhash(simhash, fracCount);
-		int dis = 0;
 		for (int i = 0; i < fracCount; i++) {
 			String frac = lFrac.get(i);
 			Map<String, List<Long>> fracMap = storage.get(i);
@@ -84,10 +83,10 @@ public class Simhash {
 				for (Long simhash2 : fracMap.get(frac)) {
 					//下面两行自己加的
 					int ha=hamming(simhash, simhash2);
-					System.out.println(ha);
-					if (ha>10) {
+					//System.out.println(ha);
+					//if (ha>10) {
 						hamm[0]=ha;
-					}
+					//}
 					if (hamming(simhash, simhash2) <= hammingThresh) return true;
 				}
 			}

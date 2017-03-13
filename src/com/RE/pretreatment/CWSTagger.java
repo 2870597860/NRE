@@ -56,6 +56,8 @@ public class CWSTagger {
 					// 对分词的结果去除停用词  
 				    List<String> baseWords02 = stopWords.phraseDel((String[])CWSWords.toArray(new String[size]));
 					CWSTaggerResult.put(company, baseWords02.toString());
+					
+					System.out.println(CWSTaggerResult);
 				}
 			} catch (JSONException | UnirestException | IOException e) {
 				// TODO Auto-generated catch block

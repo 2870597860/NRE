@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+		"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+		"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="hibernate.connection.password">123456</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/aner</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</property>
+    	<property name="hbm2ddl.auto">update</property><!-- 自动更新 -->
+    	<property name="show_sql">true</property>
+    	<property name="hibernate.format_sql">true</property>
+    	
+    	<!-- C3P0连接池配置 -->
+    	<property name="hibernate.c3p0.max_size">200</property>
+    	<property name="hibernate.c3p0.min_size">2</property>
+    	<property name="hibernate.c3p0.timeout">1800</property>
+    	<!-- C3P0缓存Statement的数量 -->
+    	<property name="hibernate.c3p0.max_statements">50</property>
+    	
+    	<mapping class="cn.ner.hibernate.domain.Companys"/>
+    	<mapping class="cn.ner.hibernate.domain.Entitys"/>
+   
+    </session-factory>
+</hibernate-configuration>

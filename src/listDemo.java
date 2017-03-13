@@ -4,6 +4,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 import java.util.Set;
 
 public class listDemo {
@@ -51,5 +53,11 @@ public class listDemo {
 		}
 		System.out.println("========");
 		System.out.println(ssbb.toString());
+		HashMap<String , String> mapw=new HashMap<>();
+		mapw.put("dasd", null);
+		System.out.println(mapw.get("dasd"));
+		System.out.println("A股product_name".length());
+		String fefe="江铃控股有限公司                                   75,802                73,013             3.82%";
+		System.out.println(fefe.replaceAll(" +", " "));
 	}
 }

@@ -80,7 +80,6 @@ public class GetEntityMain {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-
 		return sb.toString();
 
 	} 

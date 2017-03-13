@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xml4nlp>
+    <note sent="y" word="y" pos="y" ne="n" parser="y" semparser="n" lstmsemparser="n" wsd="n" srl="n" />
+    <doc>
+        <para id="0">
+            <sent id="0" cont="长安福特，长安马自达销量增加，导致净利润均同比有较大增长；">
+                <word id="0" cont="长安" pos="ns" parent="1" relate="ATT" />
+                <word id="1" cont="福特" pos="nz" parent="6" relate="SBV" />
+                <word id="2" cont="，" pos="wp" parent="1" relate="WP" />
+                <word id="3" cont="长安" pos="nz" parent="4" relate="ATT" />
+                <word id="4" cont="马自达" pos="nz" parent="5" relate="ATT" />
+                <word id="5" cont="销量" pos="n" parent="6" relate="SBV" />
+                <word id="6" cont="增加" pos="v" parent="-1" relate="HED" />
+                <word id="7" cont="，" pos="wp" parent="6" relate="WP" />
+                <word id="8" cont="导致" pos="v" parent="6" relate="COO" />
+                <word id="9" cont="净利润" pos="n" parent="12" relate="SBV" />
+                <word id="10" cont="均" pos="d" parent="12" relate="ADV" />
+                <word id="11" cont="同比" pos="j" parent="12" relate="ADV" />
+                <word id="12" cont="有" pos="v" parent="8" relate="VOB" />
+                <word id="13" cont="较" pos="d" parent="14" relate="ADV" />
+                <word id="14" cont="大" pos="a" parent="15" relate="ADV" />
+                <word id="15" cont="增长" pos="v" parent="12" relate="VOB" />
+                <word id="16" cont="；" pos="wp" parent="6" relate="WP" />
+            </sent>
+            <sent id="1" cont="长安铃木销量有较大下滑，导致净利润出现大幅亏损；">
+                <word id="0" cont="长安" pos="ns" parent="2" relate="ATT" />
+                <word id="1" cont="铃木" pos="nz" parent="2" relate="ATT" />
+                <word id="2" cont="销量" pos="n" parent="3" relate="SBV" />
+                <word id="3" cont="有" pos="v" parent="-1" relate="HED" />
+                <word id="4" cont="较" pos="d" parent="5" relate="ADV" />
+                <word id="5" cont="大" pos="a" parent="6" relate="ADV" />
+                <word id="6" cont="下滑" pos="v" parent="3" relate="VOB" />
+                <word id="7" cont="，" pos="wp" parent="3" relate="WP" />
+                <word id="8" cont="导致" pos="v" parent="3" relate="COO" />
+                <word id="9" cont="净利润" pos="n" parent="10" relate="SBV" />
+                <word id="10" cont="出现" pos="v" parent="8" relate="VOB" />
+                <word id="11" cont="大幅" pos="d" parent="12" relate="ADV" />
+                <word id="12" cont="亏损" pos="v" parent="10" relate="VOB" />
+                <word id="13" cont="；" pos="wp" parent="3" relate="WP" />
+            </sent>
+            <sent id="2" cont="CAPSA 销量下降，且期间费用增加，导致亏损扩大。">
+                <word id="0" cont="CAPSA" pos="ws" parent="1" relate="ATT" />
+                <word id="1" cont="销量" pos="n" parent="2" relate="SBV" />
+                <word id="2" cont="下降" pos="v" parent="-1" relate="HED" />
+                <word id="3" cont="，" pos="wp" parent="2" relate="WP" />
+                <word id="4" cont="且" pos="c" parent="7" relate="ADV" />
+                <word id="5" cont="期间" pos="nd" parent="6" relate="ATT" />
+                <word id="6" cont="费用" pos="n" parent="7" relate="SBV" />
+                <word id="7" cont="增加" pos="v" parent="2" relate="COO" />
+                <word id="8" cont="，" pos="wp" parent="2" relate="WP" />
+                <word id="9" cont="导致" pos="v" parent="2" relate="COO" />
+                <word id="10" cont="亏损" pos="v" parent="11" relate="SBV" />
+                <word id="11" cont="扩大" pos="v" parent="9" relate="VOB" />
+                <word id="12" cont="。" pos="wp" parent="2" relate="WP" />
+            </sent>
+        </para>
+    </doc>
+</xml4nlp>
